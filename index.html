@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Marvel Characters</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Marvel:ital@1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
+    <link rel="stylesheet" href="./style.css" />
+</head>
+
+<body>
+    <main>
+        <section class="field is-grouped has-background-black" id="bts">
+            <button class="posters" value="Spider-Man">Spider-Man</button>
+            <button class="posters" value="Thor">Thor</button>
+            <button class="posters" value="Captain America">Captain America</button>
+            <button class="posters" value="Black Panther">Black Panther</button>
+            <button class="posters" value="Doctor Strange">Doctor Strange</button>
+            <button class="posters" value="Ant Man">Ant Man</button>
+            <button class="posters" value="Iron man">Iron man</button>
+            <button class="posters" value="Hulk">Hulk</button>
+            <button class="posters" value="Deadpool">Deadpool</button>
+            <button class="posters" value="Wolverine">Wolverine</button>
+            <button class="posters" value="Captain Marvel">Captain Marvel</button>
+            <button class="posters" value="Daredevil">Daredevil</button>
+        </section>
+
+        <div class="container hide" id="movie-cards">
+            <!-- movie cards go here -->
+        </div>
+
+        <div class="container" id="character-cards">
+            <div class="flip-card" id="hero-${i + 1}">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        ${heroImg}
+                    </div>
+                    <div class="flip-card-back has-background-black">
+                        <h1
+                            class="Name-${i + 1} card-header-title level-item is-size-3 has-text-weight-semibold has-text-white has-background-danger-dark">
+                            ${name}</h1>
+                        <div class="card-content">
+                            <button class="btn-${i + 1} button content is-small level-item is-warning  is-rounded"
+                                onClick="javascript:window.open('${heroBio}', '_blank');">${name}'s
+                                Bio</button>
+                            <button class="btn-${i + 1} button content is-small level-item is-warning is-rounded"
+                                onClick="javascript:window.open('${heroComic}', '_blank');">${name}'s
+                                Comics</button>
+                            <button class="button content is-small is-warning level-item  is-rounded">Movies</button>
+                        </div>
+                    </div>
+
+    </main>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="./logic.js">
+    </script>
+</body>
+
+</html>
